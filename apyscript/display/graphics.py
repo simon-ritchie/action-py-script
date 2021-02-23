@@ -37,7 +37,7 @@ class Graphics(
         """
         from apyscript.display.sprite import Sprite
         display_validation.validate_sprite(sprite=parent)
-        self.parent: Sprite = parent
+        self.parent_sprite: Sprite = parent
         if variable_name is None:
             variable_name = expression_variables_util.get_next_variable_name(
                 type_name='graphics')
@@ -49,8 +49,8 @@ class Graphics(
         """
         Append constructor expression to file.
         """
-        stage_name: str = self.parent.stage.variable_name
-        parent_name: str = self.parent.variable_name
+        stage_name: str = self.parent_sprite.stage.variable_name
+        parent_name: str = self.parent_sprite.variable_name
         expression: str = (
             f'var {self.variable_name} = {stage_name}.group();'
             f'\n{parent_name}.add({self.variable_name});'

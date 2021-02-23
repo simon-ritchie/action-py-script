@@ -117,7 +117,7 @@ def _make_rect_attrs_expression(rectangle: Rectangle) -> str:
     """
     from apyscript.display import graphics_expression
     from apyscript.display.graphics import Graphics
-    graphics: Graphics = rectangle.parent
+    graphics: Graphics = rectangle.parent_graphics
     INDENT_NUM: int = 2
     rect_attrs_expression: str = '\n  .attr({'
     rect_attrs_expression = graphics_expression.append_fill_expression(

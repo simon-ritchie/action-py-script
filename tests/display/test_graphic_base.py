@@ -19,7 +19,7 @@ class TestGraphicBase:
             variable_name='test_graphic')
         testing_helper.assert_attrs(
             expected_attrs={
-                'parent': sprite.graphics,
+                'parent_graphics': sprite.graphics,
                 '_x': 100,
                 '_y': 200,
             },

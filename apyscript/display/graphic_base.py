@@ -20,8 +20,6 @@ class GraphicBase(DisplayObject):
 
         Parameters
         ----------
-        parent : Graphics
-            Graphics instance to link this graphic.
         x : int
             X position.
         y : int
@@ -32,7 +30,7 @@ class GraphicBase(DisplayObject):
         """
         from apyscript.display.graphics import Graphics
         display_validation.validate_graphics(graphics=parent)
-        self.parent: Graphics = parent
+        self.parent_graphics: Graphics = parent
         number_validation.validate_integer(integer=x)
         number_validation.validate_integer(integer=y)
         self._x = x

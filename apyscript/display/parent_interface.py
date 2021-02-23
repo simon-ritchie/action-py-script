@@ -48,6 +48,8 @@ class ParentInterface:
             interfaces.
         """
         parent_validation.validate_parent_instance(parent=value)
+        parent_validation.validate_parent_contains_child(
+            parent=value, child=self)
         self._parent = value
 
     def remove_from_parent(self) -> None:

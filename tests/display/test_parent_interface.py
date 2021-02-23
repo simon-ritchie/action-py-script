@@ -13,14 +13,13 @@ class TestParentInterface:
 
     @retry(stop_max_attempt_number=5, wait_fixed=randint(100, 1000))
     def test_parent(self) -> None:
-        parent_interface: ParentInterface = ParentInterface()
         stage: Stage = Stage()
         sprite: Sprite = Sprite(stage=stage)
-        parent_interface.parent = sprite
-        assert parent_interface.parent == sprite
+        stage.add_child(child=sprite)
+        assert sprite.parent == stage
 
         with pytest.raises(ValueError):  # type: ignore
-            parent_interface.parent = 100
+            sprite.parent = 100
 
     @retry(stop_max_attempt_number=5, wait_fixed=randint(100, 1000))
     def test_remove_from_parent(self) -> None:

@@ -19,7 +19,7 @@ class TestGraphics:
         graphics: Graphics = Graphics(parent=sprite)
         testing_helper.assert_attrs(
             expected_attrs={
-                'parent': sprite,
+                'parent_sprite': sprite,
             },
             any_obj=graphics)
         assert isinstance(graphics.variable_name, str)

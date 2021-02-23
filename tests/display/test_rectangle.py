@@ -24,7 +24,7 @@ class TestRectangle:
             line_alpha=0.3)
         testing_helper.assert_attrs(
             expected_attrs={
-                'parent': sprite.graphics,
+                'parent_graphics': sprite.graphics,
                 '_x': 100,
                 '_y': 200,
                 'width': 300,
