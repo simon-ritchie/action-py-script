@@ -16,6 +16,7 @@ from apysc.display.rectangle import Rectangle  # isort:skip # noqa
 from apysc.display.polyline import Polyline  # isort:skip # noqa
 from apysc.display.line_caps import LineCaps  # isort:skip # noqa
 from apysc.display.line_joints import LineJoints  # isort:skip # noqa
+from apysc.display.line_dot_setting import LineDotSetting  # isort:skip # noqa
 from apysc.geom.point2d import Point2D  # isort:skip # noqa
 from apysc.event.event import Event  # isort:skip # noqa
 from apysc.event.mouse_event import MouseEvent  # isort:skip # noqa
